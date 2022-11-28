@@ -36,7 +36,7 @@ class DockerRegistryClient(object):
 
         return list(self._repositories_by_namespace.keys())
 
-    def repository(self, repository, namespace=None):
+    def repository(self, repository=None, namespace=None):
         if '/' in repository:
             if namespace is not None:
                 raise RuntimeError('cannot specify namespace twice')
